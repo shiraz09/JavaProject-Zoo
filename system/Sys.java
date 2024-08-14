@@ -1,23 +1,26 @@
-package system;
+/** Shiraz Nagaoker 208324194
+ Topaz Natan 311561567  **/
 
+
+package system;
 import Olympics.Medal;
 import animals.*;
-
 import java.util.Scanner;
 
-public class Sys {
+/** public class Sys {
     public static void main(String[] args) {
+        /** We will create an object by input from the user
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number of animals: ");
         int numOfAnimals = scanner.nextInt();
         Animal[] animals = new Animal[numOfAnimals];
 
+        /** Loop to get animal details based on user input
         for (int i = 0; i < numOfAnimals; i++) {
             System.out.println("Choose type of animal:");
             System.out.println("1. Land");
             System.out.println("2. Marine");
             System.out.println("3. Aerial");
-
             int typeChoice = scanner.nextInt();
             switch (typeChoice) {
                 case 1:
@@ -49,16 +52,17 @@ public class Sys {
                     break;
             }
         }
+
         boolean Menu2 = true;
         while (Menu2) {
             System.out.println("Choose an action:");
             System.out.println("1. Show information about all animals");
             System.out.println("2. Make all animals sound");
             System.out.println("3. Exit");
-
             int actionChoice = scanner.nextInt();
             switch (actionChoice) {
                 case 1:
+
                     for (Animal animal : animals) {
                         System.out.println(animal);
                     }
@@ -76,8 +80,15 @@ public class Sys {
                     break;
             }
         }
-
     }
+
+    /**
+     * Creates a Marine animal based on user input.
+     *
+     * @param scanner the Scanner object for user input
+     * @param choice  the type of Marine animal to create
+     * @return the created Marine animal
+
 
     private static Animal createMarineAnimal(Scanner scanner, int choice) {
         scanner.nextLine();
@@ -131,10 +142,16 @@ public class Sys {
             default:
                 System.out.println("Invalid choice, returning null.");
                 return null;
-
-
         }
     }
+
+    /**
+     * Creates a Land animal based on user input.
+     *
+     * @param scanner the Scanner object for user input
+     * @param choice  the type of Land animal to create
+     * @return the created Land animal
+
 
     private static Animal createLandAnimal(Scanner scanner, int choice) {
         scanner.nextLine();
@@ -155,7 +172,6 @@ public class Sys {
                 System.out.print("Enter dog's breed: (Bulldog/Labador/other)");
                 String breed = scanner.nextLine();
                 return new Dog(dogName, dogGender, dogWeight, dogSpeed, medals, dogNoLegs, breed);
-
             case 2:
                 System.out.print("Enter cat's name: ");
                 String catName = scanner.nextLine();
@@ -170,7 +186,6 @@ public class Sys {
                 System.out.print("Enter if the cat is castrated: yes/no");
                 boolean catCastrated = scanner.nextBoolean();
                 return new Cat(catName, catGender, catWeight, catSpeed, medals, catNoLegs, catCastrated);
-
             case 3:
                 System.out.print("Enter snake's name: ");
                 String snakeName = scanner.nextLine();
@@ -188,14 +203,18 @@ public class Sys {
                 System.out.print("Enter the length of the snake: (0-300) ");
                 double snakelength = scanner.nextDouble();
                 return new Snake(snakeName, snakeGender, snakeWeight, snakeSpeed, medals, snakeNoLegs, poisonous, snakelength);
-
             default:
                 System.out.println("Invalid choice, returning null.");
                 return null;
-
-
         }
     }
+
+    /**
+     * Creates an Aerial animal based on user input.
+     *
+     * @param scanner the Scanner object for user input
+     * @param choice  the type of Aerial animal to create
+     * @return the created Aerial animal
 
     private static Animal createAerialAnimal(Scanner scanner, int choice) {
         scanner.nextLine();
@@ -215,7 +234,6 @@ public class Sys {
                 System.out.print("Enter eagle's altitude of flight: (300[m])");
                 double altitudeOfFlight = scanner.nextDouble();
                 return new Eagle(eagleName, eagleGender, eagleWeight, eagleSpeed, medals, wingspan, altitudeOfFlight);
-
             case 2:
                 System.out.print("Enter pigeon's name: ");
                 String pigeonName = scanner.nextLine();
@@ -234,7 +252,7 @@ public class Sys {
             default:
                 System.out.println("Invalid choice, returning null.");
                 return null;
-
         }
     }
 }
+ **/
