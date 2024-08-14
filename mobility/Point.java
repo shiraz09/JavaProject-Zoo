@@ -1,9 +1,12 @@
+/** Shiraz Nagaoker 208324194
+ Topaz Natan 311561567  **/
+
 package mobility;
 
+/** Description of the variables and the constructor **/
 public class Point {
-    private double x;
-    private double y;
-
+    private int x;
+    private int y;
     public Point(int x, int y) {
         if (x >= 0 && y >= 0) {
             this.x = x;
@@ -13,30 +16,48 @@ public class Point {
         }
     }
 
-    public double getX() {
+    /** Methods set and get **/
+    public int getX() {
         return x;
     }
-
-    public double getY() {
+    public int getY() {
         return y;
     }
+
 
     public void setX(int x) {
         if (x >= 0) {
             this.x = x;
         }
     }
-
     public void setY(int y) {
         if (y >= 0) {
             this.y = y;
         }
     }
-    public double distance(Point other) {
+
+    /** Distance calculation method **/
+    public int distance(Point other) {
         if (other == null) {
             return 0;
         }
-        return Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2));
+        return (int) Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2));
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+
+        Point point = (Point) obj;
+
+        if (x != point.x) return false;
+        return y == point.y;
+    }
+
+    public String toString() {
+        return "Point{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }
-
